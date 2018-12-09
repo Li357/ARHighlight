@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		B23439DE21B4A99E003C3F63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23439DD21B4A99E003C3F63 /* AppDelegate.swift */; };
-		B23439E021B4A99E003C3F63 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B23439DF21B4A99E003C3F63 /* art.scnassets */; };
 		B23439E221B4A99E003C3F63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23439E121B4A99E003C3F63 /* ViewController.swift */; };
 		B23439E521B4A99E003C3F63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23439E321B4A99E003C3F63 /* Main.storyboard */; };
 		B23439E721B4A9A0003C3F63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B23439E621B4A9A0003C3F63 /* Assets.xcassets */; };
 		B23439EA21B4A9A0003C3F63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23439E821B4A9A0003C3F63 /* LaunchScreen.storyboard */; };
+		B23439F521B4AEAB003C3F63 /* shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = B23439F421B4AEAB003C3F63 /* shaders.metal */; };
+		B28D784521BCD3690011466C /* HighlightTechnique.plist in Resources */ = {isa = PBXBuildFile; fileRef = B28D784421BCD3690011466C /* HighlightTechnique.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B23439DA21B4A998003C3F63 /* ARHighlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARHighlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23439DD21B4A99E003C3F63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B23439DF21B4A99E003C3F63 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		B23439E121B4A99E003C3F63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B23439E421B4A99E003C3F63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B23439E621B4A9A0003C3F63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B23439E921B4A9A0003C3F63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B23439EB21B4A9A0003C3F63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B23439F421B4AEAB003C3F63 /* shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shaders.metal; sourceTree = "<group>"; };
+		B28D784421BCD3690011466C /* HighlightTechnique.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HighlightTechnique.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		B23439DC21B4A99E003C3F63 /* ARHighlight */ = {
 			isa = PBXGroup;
 			children = (
-				B23439DD21B4A99E003C3F63 /* AppDelegate.swift */,
-				B23439DF21B4A99E003C3F63 /* art.scnassets */,
+				B23439F121B4AB6D003C3F63 /* Supporting Files */,
 				B23439E121B4A99E003C3F63 /* ViewController.swift */,
 				B23439E321B4A99E003C3F63 /* Main.storyboard */,
-				B23439E621B4A9A0003C3F63 /* Assets.xcassets */,
-				B23439E821B4A9A0003C3F63 /* LaunchScreen.storyboard */,
 				B23439EB21B4A9A0003C3F63 /* Info.plist */,
+				B23439F421B4AEAB003C3F63 /* shaders.metal */,
+				B28D784421BCD3690011466C /* HighlightTechnique.plist */,
 			);
 			path = ARHighlight;
+			sourceTree = "<group>";
+		};
+		B23439F121B4AB6D003C3F63 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B23439DD21B4A99E003C3F63 /* AppDelegate.swift */,
+				B23439E621B4A9A0003C3F63 /* Assets.xcassets */,
+				B23439E821B4A9A0003C3F63 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B23439E021B4A99E003C3F63 /* art.scnassets in Resources */,
+				B28D784521BCD3690011466C /* HighlightTechnique.plist in Resources */,
 				B23439EA21B4A9A0003C3F63 /* LaunchScreen.storyboard in Resources */,
 				B23439E721B4A9A0003C3F63 /* Assets.xcassets in Resources */,
 				B23439E521B4A99E003C3F63 /* Main.storyboard in Resources */,
@@ -141,6 +152,7 @@
 			files = (
 				B23439E221B4A99E003C3F63 /* ViewController.swift in Sources */,
 				B23439DE21B4A99E003C3F63 /* AppDelegate.swift in Sources */,
+				B23439F521B4AEAB003C3F63 /* shaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

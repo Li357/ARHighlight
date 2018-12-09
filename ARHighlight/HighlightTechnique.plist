@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>passes</key>
+	<dict>
+		<key>extract_hl</key>
+		<dict>
+			<key>outputs</key>
+			<dict>
+				<key>color</key>
+				<string>highlights</string>
+			</dict>
+			<key>inputs</key>
+			<dict>
+				<key>colorSampler</key>
+				<string>COLOR</string>
+			</dict>
+			<key>draw</key>
+			<string>DRAW_SCENE</string>
+			<key>includeCategoryMask</key>
+			<string>2</string>
+		</dict>
+		<key>combine</key>
+		<dict>
+			<key>draw</key>
+			<string>DRAW_QUAD</string>
+			<key>metalVertexShader</key>
+			<string>passthrough_vertex</string>
+			<key>metalFragmentShader</key>
+			<string>combine_fragment</string>
+			<key>outputs</key>
+			<dict>
+				<key>color</key>
+				<string>COLOR</string>
+			</dict>
+			<key>inputs</key>
+			<dict>
+				<key>background</key>
+				<string>COLOR</string>
+				<key>highlights</key>
+				<string>highlights</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>sequence</key>
+	<array>
+		<string>extract_hl</string>
+		<string>combine</string>
+	</array>
+	<key>targets</key>
+	<dict>
+		<key>highlights</key>
+		<dict>
+			<key>type</key>
+			<string>color</string>
+		</dict>
+		<key>background</key>
+		<dict>
+			<key>type</key>
+			<string>color</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
